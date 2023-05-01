@@ -1,0 +1,226 @@
+@use "assets/variables" as vars;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 50px;
+  background: vars.$desc;
+  box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.04);
+  color: white;
+  font-size: 16px;
+  padding-inline: 10%;
+  padding-block: 71px 116px;
+
+  & a {
+    color: white;
+    font-size: 14px;
+
+    &:hover {
+      color: vars.$accent;
+    }
+  }
+
+  & h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  & span,
+  & button {
+    color: white;
+  }
+
+  & button:hover {
+    color: vars.$accent;
+  }
+
+  &__tip {
+    font-size: 12px;
+  }
+
+  & > div {
+    flex: 1 1 15%;
+    justify-content: space-around;
+  }
+
+  & > div:nth-of-type(1) {
+    display: grid;
+    gap: 45px;
+    flex-basis: 20%;
+
+    & p {
+      max-width: 250px;
+    }
+
+    & > div {
+      display: grid;
+      gap: 15px;
+    }
+  }
+
+  & > div:nth-of-type(2),
+  & > div:nth-of-type(3) {
+    display: grid;
+    gap: 25px;
+
+    & > nav {
+      display: grid;
+      gap: 20px;
+    }
+  }
+
+  & > div:nth-of-type(4) {
+    display: grid;
+    gap: 20px;
+
+    & > div:nth-of-type(1) {
+      display: grid;
+      gap: 25px;
+    }
+
+    & > div:nth-of-type(2) {
+      display: grid;
+      gap: 15px;
+
+      & > div {
+        display: flex;
+        gap: 10px;
+
+        & > svg {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  & > div:nth-of-type(5) {
+    display: grid;
+    gap: 25px;
+
+    & button {
+      justify-self: flex-start;
+    }
+
+    & span {
+      justify-self: flex-start;
+      color: white;
+    }
+
+    & > div:nth-of-type(3) {
+      display: flex;
+      gap: 5px;
+
+      & > img {
+        width: 61px;
+      }
+    }
+  }
+}
+
+.mobileFooter {
+  display: grid;
+  gap: 30px;
+  background: vars.$desc;
+  box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.04);
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+
+  & a {
+    color: white;
+    font-size: 14px;
+
+    &:hover {
+      color: vars.$accent;
+    }
+  }
+
+  & h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  & span,
+  & button {
+    color: white;
+  }
+
+  & p {
+    font-size: 12px;
+  }
+
+  & > div:nth-of-type(1) {
+    display: grid;
+    gap: 15px;
+
+    & > div:nth-of-type(1) {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  }
+
+  & > div:nth-of-type(2) {
+    display: flex;
+    gap: 20px;
+    row-gap: 50px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & > div {
+      display: grid;
+      gap: 25px;
+
+      & > nav {
+        display: grid;
+        gap: 20px;
+      }
+    }
+  }
+
+  & > div:nth-of-type(3) {
+    display: flex;
+    gap: 20px;
+    row-gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & span {
+      color: white;
+    }
+
+    & div {
+      justify-items: flex-start;
+    }
+
+    & > div:nth-of-type(1) {
+      display: grid;
+      gap: 25px;
+
+      & > div {
+        display: grid;
+        gap: 10px;
+      }
+    }
+
+    & > div:nth-of-type(2) {
+      display: grid;
+      gap: 17px;
+
+      & > div {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use 'assets/variables' as vars;
+
+.search {
+  display: flex;
+  background: vars.$bg;
+  border-radius: 36px;
+  position: relative;
+  min-height: 39px;
+  padding: 10px 19px;
+  min-width: 180px;
+
+  &__input {
+    background: transparent;
+    font-size: 12px;
+    width: 80%;
+
+    &::placeholder {
+      color: vars.$placeholder;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    margin: 10px;
+    background: vars.$accent;
+    color: white;
+    cursor: pointer;
+  }
+}

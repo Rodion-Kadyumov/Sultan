@@ -1,0 +1,131 @@
+@use "assets/variables" as vars;
+@mixin btnblock {
+  height: 57px;
+  width: fit-content;
+  box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.04);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  background: white;
+}
+
+.block {
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    & > span {
+      color: vars.$text;
+      font-size: 30px;
+      font-weight: 800;
+    }
+  }
+
+  &__additional {
+    display: flex;
+    gap: 10px;
+
+    & svg {
+      color: vars.$accent;
+    }
+
+    & > div {
+      @include vars.flexDefault;
+    }
+
+    & > div {
+      @include btnblock;
+    }
+
+    & > div:nth-of-type(1) {
+      aspect-ratio: 1;
+    }
+
+    & > div:nth-of-type(2) {
+      font-size: 12px;
+      color: vars.$desc;
+      width: 245px;
+      text-align: center;
+
+      & span {
+        font-weight: 700;
+      }
+    }
+
+    & > div:nth-of-type(3) {
+      color: vars.$desc;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      gap: 10px;
+
+      & > svg {
+        fill: vars.$desc;
+      }
+    }
+  }
+}
+
+.mobileBlock {
+  display: grid;
+  gap: 20px;
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+
+    & > div {
+      @include vars.flexDefault;
+    }
+
+    & > div {
+      aspect-ratio: 1;
+      @include btnblock;
+
+      & svg {
+        color: vars.$accent;
+      }
+    }
+  }
+
+  &__additional {
+    display: grid;
+    justify-items: center;
+
+    & > div {
+      @include btnblock;
+      @include vars.flexDefault;
+      width: 100%;
+    }
+
+    & > div:nth-of-type(1) {
+      font-size: 12px;
+      color: vars.$desc;
+      text-align: center;
+
+      & span {
+        font-weight: 700;
+      }
+    }
+
+    & > div:nth-of-type(2) {
+      color: vars.$desc;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      gap: 10px;
+
+      & > svg {
+        fill: vars.$desc;
+      }
+    }
+  }
+}

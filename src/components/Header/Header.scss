@@ -1,0 +1,135 @@
+@use "assets/variables" as vars;
+
+.header {
+  display: grid;
+  gap: 12px;
+
+  &__separator {
+    border-right: 1px dashed vars.$desc;
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 11px;
+    padding-inline: 10%;
+
+    &-left {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex: 1 1 40%;
+
+      & .header__separator {
+        height: 39px;
+        opacity: 0.05;
+      }
+    }
+
+    &-right {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      white-space: nowrap;
+      justify-content: flex-end;
+      flex: 1 1 40%;
+      font-size: 14px;
+
+      & .header__separator {
+        height: 29px;
+        opacity: 0.1;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 10%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+
+    &-left {
+      display: flex;
+      gap: 38px;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1 1 20%;
+    }
+
+    &-right {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1 1 40%;
+    }
+
+    & .header__separator {
+      height: 49px;
+      opacity: 0.1;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background: vars.$desc;
+    opacity: 0.3;
+  }
+}
+
+.mobileHeader {
+  display: grid;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 10px;
+    padding-inline: 15px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    padding-inline: 15px;
+  }
+
+  &__btn {
+    cursor: pointer;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding-block: 13px 12px;
+    width: 100%;
+
+    & > span {
+      font-size: 12px;
+      font-weight: 600;
+      color: vars.$desc;
+    }
+
+    & > svg {
+      color: vars.$desc;
+    }
+  }
+
+  &__separator {
+    height: 30px;
+    border-right: 1px dashed vars.$desc;
+    opacity: .1;
+  }
+}

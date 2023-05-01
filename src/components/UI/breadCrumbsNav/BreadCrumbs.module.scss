@@ -1,0 +1,48 @@
+@use 'assets/variables' as vars;
+
+.nav {
+  &__link {
+    font-weight: 300;
+
+    &_active {
+      opacity: .5;
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      height: 16px;
+      border-right: 1px dashed vars.$desc;
+      margin-inline: 10px;
+      opacity: .3;
+    }
+  }
+}
+
+.mobileNav {
+  gap: 5px;
+  align-items: center;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: vars.$yellowGradient;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    & > svg {
+      fill: transparent;
+      stroke: vars.$desc;
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: vars.$desc;
+  }
+}

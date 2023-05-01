@@ -1,0 +1,42 @@
+@use 'assets/variables' as vars;
+
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  & > label:hover, & > input:hover {
+    color: vars.$text;
+    cursor: pointer;
+    border-color: vars.$text;
+  } 
+
+  & > input {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid vars.$desc;
+    border-radius: 2px;
+    width: 10px;
+    height: 10px;
+
+    &:checked {
+      background: vars.$accent;
+    }
+  }
+
+  & > label {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: vars.$desc;
+    font-size: 14px;
+    padding-left: 10px;
+
+    & > span {
+      font-size: 10px;
+    }
+  }
+
+  &_invisible {
+    display: none;
+  }
+}

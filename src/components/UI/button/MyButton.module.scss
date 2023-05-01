@@ -1,0 +1,33 @@
+@use 'assets/variables' as vars;
+@mixin defContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  @include defContainer;
+  gap: 12px;
+  background: vars.$accent;
+  border-radius: 79px;
+  cursor: pointer;
+  height: fit-content;
+  max-width: 200px;
+  padding: 10px 17px;
+  font-size: 14px;
+
+  &__text {
+    @include defContainer;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    min-height: 39px;
+    min-width: 131px;
+  }
+
+  &__icon {
+    @include defContainer;
+    color: white;
+    min-height: 39px;
+  }
+}

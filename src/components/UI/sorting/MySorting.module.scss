@@ -1,0 +1,68 @@
+@use 'assets/variables' as vars;
+@mixin textButton {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sort {
+  display: flex;
+  gap: 5px;
+
+  &__title {
+    font-weight: 500;
+    color: vars.$text;
+    font-size: 16px;
+  }
+
+  &__selector {
+    position: relative;
+    width: fit-content;
+  }
+
+  &__value {
+    @include textButton;
+    color: vars.$desc;
+
+    & > svg {
+      fill: vars.$desc;
+    }
+
+    &:hover {
+      color: vars.$text;
+
+      & > svg {
+        fill: vars.$text;
+      }
+    }
+  }
+
+  &__list {
+    border: 1px solid vars.$desc;
+    flex-direction: column;
+    transition: .3;
+    position: absolute;
+    right: -5px;
+    top: 25px;
+    background: vars.$bg;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  &__option {
+    padding: 5px;
+    color: vars.$text;
+    @include textButton;
+
+    &:hover {
+      background: vars.$desc;
+      color: vars.$bg;
+
+      & > svg {
+        fill: vars.$bg;
+      }
+    }
+  }
+}

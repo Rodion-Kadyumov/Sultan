@@ -1,0 +1,55 @@
+@use 'assets/variables' as vars;
+
+.modal {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: vars.$descAlt;
+  position: fixed;
+  top: 0;
+}
+
+.form {
+  margin-top: 2vh;
+  width: fit-content;
+  margin-inline: auto;
+  display: grid;
+  background: white;
+  padding: 15px;
+  gap: 10px;
+  border-radius: 2px;
+
+  &__title {
+    text-align: center;
+    
+  }
+
+  & > input, & > textarea {
+    padding: 5px;
+    border: 1px solid vars.$descAlt;
+    border-radius: 5px;
+  }
+
+  & > textarea {
+    min-width: 225px;
+    min-height: 100px;
+  }
+
+  &__sizeType {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__treatment {
+    display: grid;
+    gap: 5px;
+    margin-left: 15px;
+  }
+
+  &__btns {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}

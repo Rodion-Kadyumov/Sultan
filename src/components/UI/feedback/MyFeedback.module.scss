@@ -1,0 +1,39 @@
+@use 'assets/variables' as vars;
+
+.feedback {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+
+  &__left {
+    display: grid;
+    justify-items: flex-end;
+    gap: 5px;
+  }
+
+  &__phone {
+    color: vars.$text;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  &__time {
+    font-size: 12px;
+  }
+
+  &__btn {
+    font-size: 10px;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+    white-space: nowrap;
+
+    &:hover {
+      color: vars.$text;
+    }
+  }
+
+  &__time, &__btn {
+    color: vars.$desc;
+  }
+}

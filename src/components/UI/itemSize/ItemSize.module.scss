@@ -1,0 +1,12 @@
+@use "assets/variables" as vars;
+
+.size {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  & > span {
+    font-size: 12px;
+    color: vars.$desc;
+  }
+}

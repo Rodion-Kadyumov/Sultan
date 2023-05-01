@@ -1,0 +1,37 @@
+@use 'assets/variables' as vars;
+
+.filter {
+  display: grid;
+  gap: 15px;
+
+  &__list {
+    display: grid;
+    gap: 5px;
+  }
+
+  &__button {
+    background: transparent;
+    cursor: pointer;
+
+    & > span {
+      display: flex;
+      gap: 5px;
+      align-items: baseline;
+      font-size: 12px;
+      font-weight: 500;
+      color: vars.$desc;
+
+      & > svg {
+        fill: vars.$desc;
+      }
+
+      &:hover {
+        color: vars.$text;
+
+        & > svg {
+          fill: vars.$text;
+        }
+      }
+    }
+  }
+}

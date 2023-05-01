@@ -1,0 +1,145 @@
+@use "assets/variables" as vars;
+@mixin list {
+  display: grid;
+  gap: 5px;
+
+  & > span {
+    display: flex;
+    gap: 5px;
+    color: vars.$desc;
+    font-size: 14px;
+    font-weight: 300;
+
+    & > span {
+      font-size: 14px;
+      font-weight: 500;
+      color: vars.$text;
+    }
+  }
+}
+
+.page {
+  display: flex;
+
+  &__nav {
+    padding-inline: 10%;
+    margin-block: 45px 50px;
+  }
+
+  &__notFound {
+    text-align: center;
+    margin-block: 50px;
+  }
+
+  &__main {
+    padding-inline: 10%;
+    padding-bottom: 60px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 30%;
+    & > img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  &__right {
+    display: grid;
+    gap: 30px;
+  }
+
+  &__top {
+    display: grid;
+    gap: 10px;
+
+    & > span:nth-of-type(1) {
+      color: #1fd85d;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 800;
+    max-width: 500px;
+
+    & > span {
+      font-weight: 400;
+    }
+  }
+
+  &__info {
+    @include list;
+  }
+
+  &__about {
+    display: grid;
+    gap: 20px;
+
+    & > div {
+      display: grid;
+      gap: 15px;
+
+      & > div {
+        @include list;
+      }
+    }
+
+    & button {
+      background: transparent;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: vars.$text;
+      cursor: pointer;
+
+      & > svg {
+        fill: vars.$text;
+      }
+    }
+
+    & p {
+      font-size: 12px;
+      font-weight: 300;
+      color: vars.$desc;
+      max-width: 500px;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    max-width: 270px;
+    border-top: 1px dashed vars.$descAlt;
+  }
+}
+
+@media (0 < width < 680px) {
+  .page {
+    &__nav,
+    &__main {
+      padding-inline: 15px;
+    }
+
+    &__nav {
+      margin-block: 20px 25px;
+    }
+
+    &__main {
+      padding-bottom: 50px;
+    }
+  }
+}

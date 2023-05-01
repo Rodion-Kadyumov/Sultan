@@ -1,0 +1,29 @@
+@use "assets/variables.scss" as vars;
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  &__icon {
+    display: flex;
+    color: vars.$desc;
+  }
+
+  &__text {
+    display: grid;
+    white-space: nowrap;
+    font-size: 14px;
+
+    & > span:nth-of-type(1) {
+      font-weight: 600;
+      color: vars.$text;
+    }
+
+    & > span:nth-of-type(2) {
+      font-weight: 300;
+      color: vars.$desc;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use 'assets/variables' as vars;
+
+.counter {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  &__btn {
+    background: vars.$yellowGradient;
+    padding: 4px 14px;
+    border-radius: 1000px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15px;
+    color: vars.$desc;
+    cursor: pointer;
+  }
+
+  &__count {
+    font-size: 14px;
+    font-weight: 500;
+    color: vars.$desc;
+  }
+}

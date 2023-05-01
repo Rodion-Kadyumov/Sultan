@@ -1,0 +1,13 @@
+$text: #111111;
+$desc: #3F4E65;
+$descAlt: rgba(63, 78, 101, .3);
+$accent: #FFC85E;
+$bg: #EDEDED;
+$placeholder: #5C6370;
+$yellowGradient: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+
+@mixin flexDefault {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

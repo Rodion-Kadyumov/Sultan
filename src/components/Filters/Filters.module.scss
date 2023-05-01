@@ -1,0 +1,46 @@
+@use "assets/variables" as vars;
+
+.filter {
+  display: grid;
+  gap: 10px;
+  width: fit-content;
+
+  &__filters {
+    display: grid;
+    gap: 30px;
+  }
+
+  &__buttons {
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    width: 32px;
+    height: 32px;
+    background: vars.$yellowGradient;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+    & > svg {
+      fill: transparent;
+      stroke: vars.$desc;
+    }
+  }
+}
+
+@media (0 < width < 680px) {
+  .filter {
+    width: 100%;
+  }
+}

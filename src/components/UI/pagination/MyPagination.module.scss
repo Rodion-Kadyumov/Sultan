@@ -1,0 +1,50 @@
+@use 'assets/variables' as vars;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  &__pages {
+    display: flex;
+  }
+
+  &__page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 35px;
+    border-radius: 50%;
+    color: vars.$desc;
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    width: 35px;
+    height: 35px;
+
+    &_active, &:hover {
+      background: vars.$yellowGradient;
+    }
+  }
+
+  &__prev, &__next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+
+    & > svg {
+      stroke: vars.$accent;
+    }
+
+    &:hover {
+      & > svg {
+        stroke: vars.$desc;
+      }
+    }
+  }
+}
